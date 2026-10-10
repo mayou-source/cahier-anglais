@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAFdElEQVR4nO3cX2jVZRzH8Z39bdPhlhv70zYyFihkYKRRVyZLhZqIZjDJUVu7aBFKo7rqoosuIiUsGpLlUrNRgmmKoJhZELlYF5lhGivjtM3GdHObWzvb2bqoi4Q9Q/Z5nud3fj/fr9vH4/lO3jwcz/mexapXn00D5io96AEQbgQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJBkBj3AbHKy088fXe70KYZvJB/Y0Gllhsvdf69tOpdMTt/6s99TmXvig/tn/zNv7Prjo8+v3Prf6Rk3kDV333XHU2uLg57CNwKy6cUtFbk5t9c/6e3107pWXJj1zIbSoKfwioAsa9pUviA/pV9Z2kVAluXPy3i+rjzoKfwhIPueri0pK84OegpPCMi+nOz0rfUVQU/hCQE5sb6mqLoqN+gpfIjCy711zT9d6BoNeoqbZKTHXnq2svn1S0EP4hw3kCuPPVK4bMn8oKdwjoAcermxKugRnCMgh5YvzV+5oiDoKdwiILdaGirTY0EP4RIBWZCcMn4Cv3hRXu2qIp/DeEZAFhz/+trY+JTpdFt9RVZmZG8hArKg71pi32Hjyk5FaU7d4yU+5/GJgOx4/7Oe68OTptPmzeV5uRk+5/EmCm8kftG6dG4PPPP9YNNrF63MMDSS3PVpz6vPzfz/9oUFWY0bS9/9uNvKc6UUbiBr9h/560p/wnTa+GTZnQuyfM7jBwFZM56Yemf/n6bTebkZL2yO4JoHAdl06GT/b/Ex02ndEyUVpTk+5/GAgGxKTk3vaIubTrMyY9sit+ZBQJad/Hbgx19GTKe1q4oWL8rzOY9rBGTfWx8aL6H0WFpLQ6XPYVwjIPs6zg190zloOl25ouDB+/I9juMWATmxfU982vwN1VcMbxeFURTeSEzBjcQLXaPHzlytfXThjKfLlsyvebjw1HcDnqdygRvIlbf3xicnjbdQS0NlRiT2PAjIlXjvePvxPtNpdVXu+poorHkQkEPvHegeHUuaTrfWV2Rnhf4SIiCHrg5OtB0yrnmUFWdvWRf6NQ8Ccmv3wd6B68Y1j41rQv/rYAjIrRtjydZ24xZHBF5HE5Bznxzr6+4bD3oKVwjIucTE1M69xjWPsCMgH4582X/x99R6q9MWAvJhajptljWPUIvCRxlz3on+7+Gn+1ve7LI1jMlXHYOd54ej9DHqv7iB/Nm+J4KXEAH588PPw6fPRuED1P8jIK92tMXNX4MOJQLy6tLlscOn+oOewiYC8m3nvnhiwvhF+tAhIN96+hIHjhrXPEKHgALQ2t49Mmpc8wgXAgrA4NDk7oO9QU9hR6x69dmgZ0CIcQNBQkCQEBAkBAQJAUFCQJAQECQEBAkBQRKFldYZ/XrioaBHuMm9azqCHsGJaN5AqVZPWkqOZEU0A4I3BARJNANKwRccKTiSFaxzQBLNGwjeEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFB8g8I+/k8VL2hLgAAAABJRU5ErkJggg==">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Anglais">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Cahier d'anglais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Remise à zéro équivalente à celle de la page publiée sur Claude */
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+
+/* Layout: une page de cahier à grands carreaux (Seyès) avec marge rouge; une colonne de 720px, onglets Réviser / Ajouter / Mes mots. */
+:root {
+  --paper: #ffffff;
+  --sheet: #f5f6f8;
+  --ink: #14171f;
+  --muted: #5f6675;
+  --line: #e3e6ec;
+  --accent: #2446c8;
+  --accent-ink: #ffffff;
+  --good: #17794f;
+  --good-ink: #ffffff;
+  --bad: #c23b2e;
+  --font-hand: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-ui: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1116;
+    --sheet: #171b22;
+    --ink: #e9edf5;
+    --muted: #9aa3b5;
+    --line: #2a303b;
+    --accent: #8ea6ff;
+    --accent-ink: #0f131c;
+    --good: #4cc790;
+    --good-ink: #0b1a12;
+    --bad: #ff8a7d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1116;
+  --sheet: #171b22;
+  --ink: #e9edf5;
+  --muted: #9aa3b5;
+  --line: #2a303b;
+  --accent: #8ea6ff;
+  --accent-ink: #0f131c;
+  --good: #4cc790;
+  --good-ink: #0b1a12;
+  --bad: #ff8a7d;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 16px/1.5 var(--font-ui);
+  -webkit-text-size-adjust: 100%;
+}
+.app {
+  position: relative;
+  max-width: 720px;
+  margin-inline: auto;
+  padding-block: 24px 64px;
+  padding-inline: 16px;
+}
+button, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* En-tête */
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+.kicker { margin: 0; font: 500 0.72rem var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+h1 { margin: 2px 0 0; font: 700 clamp(1.7rem, 6vw, 2.3rem)/1.15 var(--font-hand); text-wrap: balance; }
+.stats { display: flex; gap: 22px; margin: 0; }
+.stats div { display: flex; flex-direction: column; }
+.stats dt { font: 500 0.68rem var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.stats dd { margin: 0; font: 600 1.5rem/1.1 var(--font-hand); font-variant-numeric: tabular-nums; }
+
+/* Onglets */
+.tabs { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; border-bottom: 1.5px solid var(--line); background: var(--paper); }
+.tab { position: relative; min-height: 46px; padding: 0 8px; background: none; border: 0; border-bottom: 3px solid transparent; margin-bottom: -1.5px; color: var(--muted); font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.badge { min-width: 22px; padding: 1px 6px; border-radius: 99px; background: var(--accent); color: var(--accent-ink); font: 500 0.72rem/1.4 var(--font-mono); font-variant-numeric: tabular-nums; }
+
+main { margin-top: 20px; }
+.sheet { background: var(--sheet); border-radius: 14px; padding: 22px 20px; }
+.hand { font-family: var(--font-hand); }
+h2 { margin: 0 0 6px; font: 700 1.35rem/1.25 var(--font-hand); text-wrap: balance; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.loading { padding: 40px 0; text-align: center; color: var(--muted); }
+
+/* Boutons */
+.btn { min-height: 46px; padding: 0 18px; border: 1.5px solid var(--ink); border-radius: 10px; background: transparent; color: var(--ink); font-weight: 600; cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.good { background: var(--good); border-color: var(--good); color: var(--good-ink); }
+.btn.bad { border-color: var(--bad); color: var(--bad); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.btn-row .btn { flex: 1 1 160px; }
+.link { min-height: 36px; padding: 0 8px; background: none; border: 0; color: var(--accent); font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+.link.danger { color: var(--bad); }
+
+/* Démarrage d'une séance */
+.due-big { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.due-big strong { font: 600 3.4rem/1 var(--font-hand); font-variant-numeric: tabular-nums; }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 18px; }
+.seg button { min-height: 44px; padding: 4px 6px; border: 1.5px solid var(--line); border-radius: 10px; background: transparent; font-size: 0.88rem; font-weight: 600; color: var(--muted); cursor: pointer; }
+.seg button[aria-pressed="true"] { border-color: var(--accent); color: var(--ink); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.field-label { display: block; margin-top: 16px; font: 500 0.7rem var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+/* Séance */
+.progress { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.progress .count { font: 500 0.85rem var(--font-mono); font-variant-numeric: tabular-nums; min-width: 4.5em; }
+.bar { flex: 1; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+.card { min-height: 270px; display: flex; flex-direction: column; gap: 14px; padding: 22px 20px; border-radius: 14px; background: var(--sheet); }
+.card.tap { cursor: pointer; }
+.lang-row { display: flex; align-items: center; justify-content: space-between; min-height: 34px; }
+.lang { font: 500 0.7rem var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.prompt { font: 600 clamp(2rem, 8vw, 2.8rem)/1.2 var(--font-hand); overflow-wrap: anywhere; }
+.answer { padding-top: 14px; border-top: 1px solid var(--line); animation: rise 0.18s ease-out; }
+.answer-text { font: 700 clamp(1.5rem, 6vw, 2rem)/1.25 var(--font-hand); color: var(--accent); overflow-wrap: anywhere; }
+.note { margin-top: 8px; color: var(--muted); font-size: 0.95rem; }
+.speak { width: 40px; height: 40px; display: inline-grid; place-items: center; border: 1.5px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; }
+.speak svg { width: 18px; height: 18px; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+.actions .wide { grid-column: 1 / -1; }
+.hint { margin-top: 12px; font-size: 0.8rem; color: var(--muted); text-align: center; }
+@media (hover: none) { .hint { display: none; } }
+.miss-list { margin: 14px 0 0; padding: 0; list-style: none; }
+.miss-list li { display: flex; flex-wrap: wrap; gap: 4px 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.miss-list b { font: 700 1.05rem var(--font-hand); }
+
+/* Formulaire */
+.form-grid { display: grid; gap: 4px; }
+.form-grid input, .bulk textarea, .search input, .edit-grid input {
+  width: 100%; min-height: 48px; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--paper); font-size: 16px; color: var(--ink);
+}
+.form-grid input:focus, .bulk textarea:focus, .search input:focus, .edit-grid input:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+.form-msg { min-height: 1.4em; margin-top: 10px; font-size: 0.92rem; color: var(--bad); }
+details.bulk { margin-top: 14px; padding: 4px 20px 20px; border-radius: 14px; background: var(--sheet); }
+details.bulk summary { min-height: 48px; display: flex; align-items: center; font-weight: 600; cursor: pointer; }
+.bulk textarea { min-height: 150px; margin-top: 8px; resize: vertical; line-height: 1.5; }
+.bulk-info { margin-top: 8px; font-size: 0.9rem; color: var(--muted); }
+
+/* Liste */
+.list-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.search { margin-bottom: 8px; }
+.words { margin: 0; padding: 0; list-style: none; background: var(--sheet); border-radius: 14px; padding-inline: 18px; }
+.row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: 0; }
+.row-main { flex: 1 1 200px; min-width: 0; }
+.row .en { display: block; font: 700 1.15rem/1.3 var(--font-hand); overflow-wrap: anywhere; }
+.row .fr { display: block; overflow-wrap: anywhere; }
+.row .tag { margin-left: 6px; padding: 1px 6px; border: 1px solid var(--line); border-radius: 99px; font: 500 0.66rem var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); vertical-align: middle; }
+.row .rnote { display: block; font-size: 0.85rem; color: var(--muted); }
+.row-side { display: flex; align-items: center; gap: 2px; flex: 0 0 auto; }
+.dots { display: inline-flex; gap: 3px; margin-right: 8px; }
+.dots i { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--muted); }
+.dots i.on { background: var(--accent); border-color: var(--accent); }
+.edit-grid { display: grid; gap: 8px; flex: 1 1 260px; min-width: 0; }
+.none { padding: 22px 0; color: var(--muted); }
+
+.foot { margin-top: 26px; font-size: 0.8rem; color: var(--muted); }
+.toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); max-width: calc(100vw - 32px); padding: 11px 16px; border-radius: 10px; background: var(--ink); color: var(--paper); font-size: 0.92rem; font-weight: 500; opacity: 0; transform: translate(-50%, 8px); transition: opacity 0.18s, transform 0.18s; pointer-events: none; z-index: 5; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+@keyframes rise { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .answer { animation: none; }
+  .toast { transition: none; }
+}
+@media (max-width: 420px) {
+  .seg button { font-size: 0.8rem; }
+  .sheet { padding: 16px; }
+  .words { padding-inline: 14px; }
+}
+</style>
+
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div>
+      <h1>Mon cahier d'anglais</h1>
+    </div>
+    <dl class="stats" id="stats"></dl>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" role="tab" id="tab-review" data-tab="review" aria-selected="true" aria-controls="view-review">Réviser <span class="badge" id="badge" hidden></span></button>
+    <button class="tab" role="tab" id="tab-add" data-tab="add" aria-selected="false" aria-controls="view-add">Ajouter</button>
+    <button class="tab" role="tab" id="tab-words" data-tab="words" aria-selected="false" aria-controls="view-words">Mes mots</button>
+  </nav>
+
+  <main>
+    <section id="view-review" role="tabpanel" aria-labelledby="tab-review"></section>
+
+    <section id="view-add" role="tabpanel" aria-labelledby="tab-add" hidden>
+      <form class="sheet" id="add-form" autocomplete="off">
+        <h2>Un nouveau mot</h2>
+        <div class="form-grid">
+          <label class="field-label" for="in-en">Anglais</label>
+          <input id="in-en" type="text" placeholder="to hinder" autocapitalize="none" autocorrect="off" spellcheck="false" lang="en">
+          <label class="field-label" for="in-fr">Traduction</label>
+          <input id="in-fr" type="text" placeholder="entraver" lang="fr">
+          <label class="field-label" for="in-note">Exemple ou remarque (facultatif)</label>
+          <input id="in-note" type="text" placeholder="Bad weather hindered the rescue." lang="en">
+        </div>
+        <p class="form-msg" id="form-msg" role="alert"></p>
+        <div class="btn-row"><button class="btn primary" type="submit">Ajouter au cahier</button></div>
+      </form>
+
+      <details class="bulk" id="bulk-box">
+        <summary>Ajouter plusieurs mots d'un coup</summary>
+        <p class="muted">Un mot par ligne, avec un tiret, un « = » ou une tabulation entre l'anglais et le français.</p>
+        <label class="field-label" for="bulk-text">Liste de mots</label>
+        <textarea id="bulk-text" placeholder="wealth - richesse&#10;to rely on = compter sur&#10;harsh - dur, sévère" spellcheck="false"></textarea>
+        <p class="bulk-info" id="bulk-info" aria-live="polite"></p>
+        <div class="btn-row"><button class="btn primary" type="button" id="bulk-go" disabled>Ajouter la liste</button></div>
+      </details>
+    </section>
+
+    <section id="view-words" role="tabpanel" aria-labelledby="tab-words" hidden>
+      <div class="list-head">
+        <span class="lang" id="word-count"></span>
+        <button class="link danger" type="button" id="rm-samples" hidden>Supprimer les mots d'exemple</button>
+      </div>
+      <div class="search"><input id="search" type="search" placeholder="Chercher un mot" aria-label="Chercher un mot" autocomplete="off"></div>
+      <ul class="words" id="word-list"></ul>
+
+      <details class="bulk" id="backup-box">
+        <summary>Sauvegarde</summary>
+        <p class="muted">Exporte tes mots dans un fichier pour ne pas les perdre si tu changes de téléphone ou si tu vides les données du navigateur.</p>
+        <div class="btn-row">
+          <button class="btn" type="button" id="export-btn">Exporter mes mots</button>
+          <button class="btn" type="button" id="import-btn">Importer un fichier</button>
+        </div>
+        <input type="file" id="import-file" accept="application/json,.json" hidden>
+        <p class="bulk-info" id="backup-info" aria-live="polite"></p>
+      </details>
+    </section>
+  </main>
+
+  <p class="foot" id="foot"></p>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var LS_KEY = 'cahier-anglais-v1';
+  var DAY = 86400000;
+  var INTERVALS = [1, 3, 7, 15, 30]; /* jours avant la prochaine révision, selon le niveau atteint */
+  var MASTERED_BOX = 4;
+  var SAMPLES = [
+    ['to hinder', 'entraver'], ['to cope with', 'faire face à'], ['outcome', 'résultat, issue'],
+    ['harsh', 'dur, sévère'], ['to rely on', 'compter sur'], ['wealth', 'richesse'],
+    ['to strive', 's’efforcer de'], ['to bring about', 'provoquer, entraîner'],
+    ['yet', 'pourtant, cependant'], ['to fade', 's’estomper']
+  ];
+  var CAN_SPEAK = typeof window.speechSynthesis !== 'undefined' && typeof window.SpeechSynthesisUtterance !== 'undefined';
+  var SPEAKER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+
+  var words = [];
+  var adapter = null;
+  var loaded = false;
+  var tab = 'review';
+  var dir = 'mix';
+  var session = null;
+  var editingId = null;
+  var confirmId = null;
+  var query = '';
+  var toastTimer;
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function norm(s) { return String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+  function plural(n, one, many) { return n + ' ' + (n > 1 ? many : one); }
+  function toast(msg) {
+    var t = $('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2800);
+  }
+  function shuffle(a) {
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+  function newId() { return 'w' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+  function newWord(en, fr, note, offset, sample) {
+    var w = { id: newId(), en: en, fr: fr, note: note || '', box: 0, due: Date.now(), seen: 0, misses: 0, created: Date.now() + (offset || 0) };
+    if (sample) w.sample = true;
+    return w;
+  }
+  function dueWords() {
+    var now = Date.now();
+    return words.filter(function (w) { return (w.due || 0) <= now; });
+  }
+  function whenText(ts) {
+    var diff = ts - Date.now();
+    if (diff <= 0) return 'maintenant';
+    if (diff < 3600000) return 'dans moins d’une heure';
+    if (diff < DAY) return 'dans ' + Math.round(diff / 3600000) + ' h';
+    var d = Math.round(diff / DAY);
+    return d <= 1 ? 'demain' : 'dans ' + d + ' jours';
+  }
+  function speak(text) {
+    if (!CAN_SPEAK) return;
+    try {
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-GB';
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    } catch (e) { /* la lecture audio est facultative */ }
+  }
+
+  /* ---------- Stockage ---------- */
+  function makeLocalAdapter() {
+    var list = [];
+    var cb = function () {};
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      if (raw) { var p = JSON.parse(raw); if (Array.isArray(p)) list = p; }
+    } catch (e) { /* stockage indisponible : le cahier reste en mémoire */ }
+    function persist() { try { localStorage.setItem(LS_KEY, JSON.stringify(list)); } catch (e) { /* ignoré */ } }
+    return {
+      kind: 'local',
+      start: function (fn) { cb = fn; cb(list.slice()); },
+      save: function (ws) {
+        ws.forEach(function (w) {
+          var i = list.findIndex(function (x) { return x.id === w.id; });
+          if (i >= 0) list[i] = w; else list.push(w);
+        });
+        persist(); cb(list.slice());
+        return Promise.resolve();
+      },
+      remove: function (ids) {
+        list = list.filter(function (x) { return ids.indexOf(x.id) < 0; });
+        persist(); cb(list.slice());
+        return Promise.resolve();
+      }
+    };
+  }
+  function makeDbAdapter(db, uid) {
+    var col = db.collection('data/users/' + uid);
+    function pool(items, fn) {
+      var i = 0;
+      function run() {
+        if (i >= items.length) return Promise.resolve();
+        var item = items[i++];
+        return fn(item).then(run);
+      }
+      return Promise.all([run(), run(), run()]);
+    }
+    return {
+      kind: 'db',
+      start: function (fn) {
+        col.onSnapshot(function (snap) {
+          fn(snap.docs.map(function (d) { return d.data(); }).filter(function (w) { return w && w.id && typeof w.en === 'string'; }));
+        }, function () { toast('La synchronisation s’est interrompue. Recharge la page.'); });
+      },
+      save: function (ws) { return pool(ws, function (w) { return col.doc(w.id).set(w); }); },
+      remove: function (ids) { return pool(ids, function (id) { return col.doc(id).delete(); }); }
+    };
+  }
+  function persistFail() { toast('Pas enregistré. Réessaie dans un instant.'); }
+
+  /* ---------- Rendu ---------- */
+  function renderStats() {
+    var due = dueWords().length;
+    var mastered = words.filter(function (w) { return (w.box || 0) >= MASTERED_BOX; }).length;
+    $('stats').innerHTML =
+      '<div><dt>Mots</dt><dd>' + words.length + '</dd></div>' +
+      '<div><dt>À réviser</dt><dd>' + due + '</dd></div>' +
+      '<div><dt>Acquis</dt><dd>' + mastered + '</dd></div>';
+    var b = $('badge');
+    b.textContent = due;
+    b.hidden = due === 0;
+  }
+  function renderFoot() {
+    if (!adapter) { $('foot').textContent = ''; return; }
+    $('foot').textContent = adapter.kind === 'db'
+      ? 'Tes mots sont enregistrés sur ton compte. Toi seul peux les voir.'
+      : 'Tes mots sont enregistrés dans ce navigateur uniquement.';
+  }
+  function setTab(name) {
+    tab = name;
+    ['review', 'add', 'words'].forEach(function (n) {
+      $('view-' + n).hidden = n !== name;
+      $('tab-' + n).setAttribute('aria-selected', n === name ? 'true' : 'false');
+    });
+    if (name === 'add') { var i = $('in-en'); if (i) i.focus({ preventScroll: true }); }
+    if (name === 'words') renderWords();
+  }
+
+  function renderReview() {
+    var el = $('view-review');
+    if (!loaded) { el.innerHTML = '<p class="loading">Ouverture du cahier…</p>'; return; }
+    if (session && !session.finished) { renderSession(el); return; }
+    if (session && session.finished) { renderSummary(el); return; }
+    if (words.length === 0) {
+      el.innerHTML =
+        '<div class="sheet"><h2>Ton cahier est vide.</h2>' +
+        '<p class="muted">Ajoute les mots que tu apprends. Ils reviennent ici sous forme de cartes, plus souvent quand tu les rates.</p>' +
+        '<div class="btn-row"><button class="btn primary" data-act="goadd">Ajouter mon premier mot</button>' +
+        '<button class="btn" data-act="samples">Essayer avec 10 mots d’exemple</button></div></div>';
+      return;
+    }
+    var due = dueWords().length;
+    var next = Math.min.apply(null, words.map(function (w) { return w.due || 0; }));
+    var segs = [['en-fr', 'Anglais → Français'], ['fr-en', 'Français → Anglais'], ['mix', 'Mélangé']];
+    el.innerHTML =
+      '<div class="sheet">' +
+      '<div class="due-big"><strong>' + due + '</strong><span>' + (due > 1 ? 'mots à réviser' : 'mot à réviser') + '</span></div>' +
+      (due === 0 ? '<p class="muted">Tout est à jour. Prochaine révision ' + esc(whenText(next)) + '.</p>' : '<p class="muted">Les mots que tu rates reviennent dans la séance jusqu’à ce que tu les saches.</p>') +
+      '<span class="field-label">Sens des cartes</span>' +
+      '<div class="seg" role="group" aria-label="Sens des cartes">' +
+      segs.map(function (s) { return '<button type="button" data-act="dir" data-dir="' + s[0] + '" aria-pressed="' + (dir === s[0]) + '">' + s[1] + '</button>'; }).join('') +
+      '</div>' +
+      '<div class="btn-row"><button class="btn primary" data-act="start"' + (due === 0 ? ' disabled' : '') + '>Commencer (' + due + ')</button>' +
+      '<button class="btn" data-act="startall">Tout réviser (' + words.length + ')</button></div></div>';
+  }
+
+  function currentWord() {
+    while (session.queue.length) {
+      var id = session.queue[0];
+      var w = words.find(function (x) { return x.id === id; });
+      if (w) return w;
+      session.queue.shift();
+      session.total = Math.max(session.done, session.total - 1);
+    }
+    return null;
+  }
+  function renderSession(el) {
+    var w = currentWord();
+    if (!w) { session.finished = true; renderSummary(el); return; }
+    if (!session.cardDir[w.id]) session.cardDir[w.id] = session.dir === 'mix' ? (Math.random() < 0.5 ? 'en-fr' : 'fr-en') : session.dir;
+    var d = session.cardDir[w.id];
+    var enFirst = d === 'en-fr';
+    var prompt = enFirst ? w.en : w.fr;
+    var answer = enFirst ? w.fr : w.en;
+    var speakBtn = function (text) { return CAN_SPEAK ? '<button class="speak" type="button" data-act="speak" data-text="' + esc(text) + '" aria-label="Écouter la prononciation">' + SPEAKER + '</button>' : ''; };
+    var pct = session.total ? Math.round((session.done / session.total) * 100) : 0;
+    el.innerHTML =
+      '<div class="progress"><span class="count">' + session.done + ' / ' + session.total + '</span>' +
+      '<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="' + session.total + '" aria-valuenow="' + session.done + '"><i style="width:' + pct + '%"></i></div>' +
+      '<button class="link" data-act="quit">Arrêter</button></div>' +
+      '<div class="card' + (session.revealed ? '' : ' tap') + '"' + (session.revealed ? '' : ' data-act="reveal"') + '>' +
+      '<div class="lang-row"><span class="lang">' + (enFirst ? 'Anglais' : 'Français') + '</span>' + (enFirst ? speakBtn(w.en) : '') + '</div>' +
+      '<p class="prompt">' + esc(prompt) + '</p>' +
+      (session.revealed
+        ? '<div class="answer"><div class="lang-row"><span class="lang">' + (enFirst ? 'Français' : 'Anglais') + '</span>' + (enFirst ? '' : speakBtn(w.en)) + '</div>' +
+          '<p class="answer-text">' + esc(answer) + '</p>' + (w.note ? '<p class="note">' + esc(w.note) + '</p>' : '') + '</div>'
+        : '') +
+      '</div>' +
+      '<div class="actions">' +
+      (session.revealed
+        ? '<button class="btn bad" data-act="wrong" data-focus>À revoir</button><button class="btn good" data-act="right">Je savais</button>'
+        : '<button class="btn primary wide" data-act="reveal" data-focus>Montrer la réponse</button>') +
+      '</div>' +
+      '<p class="hint">Espace : montrer · ← à revoir · → je savais</p>';
+    var f = el.querySelector('[data-focus]');
+    if (f && tab === 'review') f.focus({ preventScroll: true });
+  }
+  function renderSummary(el) {
+    var failed = session.failedFirst.map(function (id) { return words.find(function (x) { return x.id === id; }); }).filter(Boolean);
+    el.innerHTML =
+      '<div class="sheet"><h2>Séance terminée</h2>' +
+      '<p>' + plural(session.total, 'mot revu', 'mots revus') + ', ' + session.firstTryOk + ' du premier coup.</p>' +
+      (failed.length
+        ? '<span class="field-label">À retravailler</span><ul class="miss-list">' +
+          failed.map(function (w) { return '<li><b>' + esc(w.en) + '</b><span>' + esc(w.fr) + '</span></li>'; }).join('') + '</ul>'
+        : '<p class="muted">Aucune erreur, bien joué.</p>') +
+      '<div class="btn-row"><button class="btn primary" data-act="finish">Terminer</button></div></div>';
+  }
+
+  function rowHtml(w) {
+    if (editingId === w.id) {
+      return '<li class="row" data-id="' + esc(w.id) + '"><div class="edit-grid">' +
+        '<input id="edit-en" value="' + esc(w.en) + '" aria-label="Mot anglais" autocapitalize="none" spellcheck="false">' +
+        '<input id="edit-fr" value="' + esc(w.fr) + '" aria-label="Traduction">' +
+        '<input id="edit-note" value="' + esc(w.note || '') + '" aria-label="Exemple ou remarque" placeholder="Exemple ou remarque"></div>' +
+        '<div class="row-side"><button class="link" data-act="save-edit">Enregistrer</button><button class="link" data-act="cancel-edit">Annuler</button></div></li>';
+    }
+    var box = Math.min(w.box || 0, 5);
+    var dots = '';
+    for (var i = 1; i <= 5; i++) dots += '<i class="' + (i <= box ? 'on' : '') + '"></i>';
+    var side = confirmId === w.id
+      ? '<button class="link danger" data-act="confirm-del">Confirmer</button><button class="link" data-act="cancel-del">Annuler</button>'
+      : '<button class="link" data-act="edit">Modifier</button><button class="link danger" data-act="del">Supprimer</button>';
+    return '<li class="row" data-id="' + esc(w.id) + '"><div class="row-main">' +
+      '<span class="en">' + esc(w.en) + (w.sample ? '<span class="tag">exemple</span>' : '') + '</span>' +
+      '<span class="fr">' + esc(w.fr) + '</span>' + (w.note ? '<span class="rnote">' + esc(w.note) + '</span>' : '') + '</div>' +
+      '<div class="row-side"><span class="dots" role="img" aria-label="Niveau ' + box + ' sur 5">' + dots + '</span>' + side + '</div></li>';
+  }
+  function renderWords() {
+    var list = $('word-list');
+    var q = norm(query.trim());
+    var items = words.slice().sort(function (a, b) { return (b.created || 0) - (a.created || 0); });
+    if (q) items = items.filter(function (w) { return norm(w.en).indexOf(q) >= 0 || norm(w.fr).indexOf(q) >= 0; });
+    $('word-count').textContent = q ? plural(items.length, 'résultat', 'résultats') : plural(words.length, 'mot', 'mots');
+    $('rm-samples').hidden = !words.some(function (w) { return w.sample; });
+    if (!loaded) { list.innerHTML = ''; return; }
+    if (!items.length) {
+      list.innerHTML = '<li class="none">' + (words.length ? 'Aucun mot ne correspond.' : 'Aucun mot pour l’instant. Ajoute-en dans l’onglet Ajouter.') + '</li>';
+      return;
+    }
+    list.innerHTML = items.map(rowHtml).join('');
+    if (editingId) { var i = $('edit-en'); if (i) i.focus({ preventScroll: true }); }
+  }
+  function renderAll() {
+    renderStats();
+    renderReview();
+    renderWords();
+    renderFoot();
+  }
+
+  /* ---------- Séance de révision ---------- */
+  function startSession(all) {
+    var pool = shuffle((all ? words : dueWords()).slice());
+    if (!pool.length) return;
+    session = {
+      queue: pool.map(function (w) { return w.id; }), total: pool.length, done: 0, firstTryOk: 0,
+      seen: {}, failedFirst: [], revealed: false, cardDir: {}, dir: dir, finished: false
+    };
+    renderReview();
+  }
+  function answer(ok) {
+    if (!session || session.finished || !session.revealed) return;
+    var id = session.queue.shift();
+    var w = words.find(function (x) { return x.id === id; });
+    var first = !session.seen[id];
+    session.seen[id] = true;
+    if (ok) {
+      session.done++;
+      if (session.failedFirst.indexOf(id) < 0) session.firstTryOk++;
+    } else {
+      session.queue.push(id);
+      if (first) session.failedFirst.push(id);
+    }
+    if (w && first) {
+      var nw = Object.assign({}, w, { seen: (w.seen || 0) + 1 });
+      if (ok) {
+        nw.box = Math.min((w.box || 0) + 1, INTERVALS.length);
+        nw.due = Date.now() + INTERVALS[nw.box - 1] * DAY;
+      } else {
+        nw.box = 0;
+        nw.misses = (w.misses || 0) + 1;
+        nw.due = Date.now() + DAY / 2;
+      }
+      adapter.save([nw]).catch(persistFail);
+    }
+    session.revealed = false;
+    if (!session.queue.length) session.finished = true;
+    renderReview();
+    renderStats();
+  }
+
+  /* ---------- Actions ---------- */
+  $('view-review').addEventListener('click', function (e) {
+    var t = e.target.closest('[data-act]');
+    if (!t) return;
+    var act = t.getAttribute('data-act');
+    if (act === 'dir') { dir = t.getAttribute('data-dir'); renderReview(); }
+    else if (act === 'start') startSession(false);
+    else if (act === 'startall') startSession(true);
+    else if (act === 'reveal') { if (session && !session.revealed) { session.revealed = true; renderReview(); } }
+    else if (act === 'right') answer(true);
+    else if (act === 'wrong') answer(false);
+    else if (act === 'quit' || act === 'finish') { session = null; renderAll(); }
+    else if (act === 'speak') speak(t.getAttribute('data-text'));
+    else if (act === 'goadd') setTab('add');
+    else if (act === 'samples') addSamples();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (tab !== 'review' || !session || session.finished) return;
+    var tag = e.target && e.target.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    if ((e.key === ' ' || e.key === 'Enter') && tag !== 'BUTTON') {
+      e.preventDefault();
+      if (!session.revealed) { session.revealed = true; renderReview(); }
+    } else if (session.revealed && (e.key === 'ArrowLeft' || e.key === '1')) { e.preventDefault(); answer(false); }
+    else if (session.revealed && (e.key === 'ArrowRight' || e.key === '2')) { e.preventDefault(); answer(true); }
+    else if (!session.revealed && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) { e.preventDefault(); session.revealed = true; renderReview(); }
+  });
+  document.querySelector('.tabs').addEventListener('click', function (e) {
+    var t = e.target.closest('[data-tab]');
+    if (t) setTab(t.getAttribute('data-tab'));
+  });
+
+  function hasEn(en) {
+    var n = norm(en.trim());
+    return words.some(function (w) { return norm(w.en.trim()) === n; });
+  }
+  function addSamples() {
+    if (!adapter) return;
+    var items = SAMPLES.filter(function (s) { return !hasEn(s[0]); }).map(function (s, i) { return newWord(s[0], s[1], '', i, true); });
+    if (!items.length) { toast('Les mots d’exemple sont déjà dans ton cahier.'); return; }
+    adapter.save(items).then(function () { toast(items.length + ' mots d’exemple ajoutés. Tu pourras les supprimer.'); }).catch(persistFail);
+  }
+
+  $('add-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var msg = $('form-msg');
+    var en = $('in-en').value.trim();
+    var fr = $('in-fr').value.trim();
+    var note = $('in-note').value.trim();
+    msg.textContent = '';
+    if (!adapter) { msg.textContent = 'Le cahier s’ouvre, réessaie dans une seconde.'; return; }
+    if (!en || !fr) { msg.textContent = 'Remplis le mot anglais et sa traduction.'; (en ? $('in-fr') : $('in-en')).focus(); return; }
+    if (hasEn(en)) { msg.textContent = '« ' + en + ' » est déjà dans ton cahier.'; $('in-en').focus(); return; }
+    var w = newWord(en, fr, note, 0, false);
+    $('in-en').value = ''; $('in-fr').value = ''; $('in-note').value = '';
+    $('in-en').focus();
+    adapter.save([w]).then(function () { toast('Ajouté : ' + en + ' → ' + fr); }).catch(persistFail);
+  });
+
+  function parseBulk(text) {
+    var out = [], skipped = 0, seen = {};
+    text.split(/\r?\n/).forEach(function (line) {
+      var l = line.trim();
+      if (!l) return;
+      var m = l.match(/^(.+?)\s*(?:\t|\s[-–—]\s|\s?=\s?|\s?;\s?|\s?:\s)\s*(.+)$/);
+      if (!m) { skipped++; return; }
+      var en = m[1].trim(), fr = m[2].trim();
+      var k = norm(en);
+      if (!en || !fr || seen[k] || hasEn(en)) { skipped++; return; }
+      seen[k] = true;
+      out.push([en, fr]);
+    });
+    return { items: out, skipped: skipped };
+  }
+  function updateBulk() {
+    var r = parseBulk($('bulk-text').value);
+    var info = $('bulk-info');
+    if (!$('bulk-text').value.trim()) info.textContent = '';
+    else info.textContent = plural(r.items.length, 'mot reconnu', 'mots reconnus') + (r.skipped ? ', ' + plural(r.skipped, 'ligne ignorée', 'lignes ignorées') + ' (sans séparateur ou déjà présente)' : '') + '.';
+    $('bulk-go').disabled = r.items.length === 0;
+  }
+  $('bulk-text').addEventListener('input', updateBulk);
+  $('bulk-go').addEventListener('click', function () {
+    if (!adapter) return;
+    var r = parseBulk($('bulk-text').value);
+    if (!r.items.length) return;
+    var items = r.items.map(function (p, i) { return newWord(p[0], p[1], '', i, false); });
+    $('bulk-go').disabled = true;
+    adapter.save(items).then(function () {
+      $('bulk-text').value = '';
+      updateBulk();
+      toast(plural(items.length, 'mot ajouté', 'mots ajoutés') + '.');
+    }).catch(function () { persistFail(); updateBulk(); });
+  });
+
+  $('search').addEventListener('input', function (e) { query = e.target.value; renderWords(); });
+  $('rm-samples').addEventListener('click', function () {
+    var ids = words.filter(function (w) { return w.sample; }).map(function (w) { return w.id; });
+    if (!ids.length) return;
+    adapter.remove(ids).then(function () { toast('Mots d’exemple supprimés.'); }).catch(persistFail);
+  });
+  function saveEdit(id) {
+    var en = ($('edit-en').value || '').trim();
+    var fr = ($('edit-fr').value || '').trim();
+    var note = ($('edit-note').value || '').trim();
+    if (!en || !fr) { toast('Le mot et sa traduction ne peuvent pas être vides.'); return; }
+    var w = words.find(function (x) { return x.id === id; });
+    editingId = null;
+    if (!w) { renderWords(); return; }
+    var nw = Object.assign({}, w, { en: en, fr: fr, note: note });
+    delete nw.sample;
+    adapter.save([nw]).then(function () { toast('Modifié.'); }).catch(persistFail);
+    renderWords();
+  }
+  $('word-list').addEventListener('click', function (e) {
+    var t = e.target.closest('[data-act]');
+    var li = e.target.closest('li[data-id]');
+    if (!t || !li) return;
+    var id = li.getAttribute('data-id');
+    var act = t.getAttribute('data-act');
+    if (act === 'edit') { editingId = id; confirmId = null; renderWords(); }
+    else if (act === 'cancel-edit') { editingId = null; renderWords(); }
+    else if (act === 'save-edit') saveEdit(id);
+    else if (act === 'del') { confirmId = id; editingId = null; renderWords(); }
+    else if (act === 'cancel-del') { confirmId = null; renderWords(); }
+    else if (act === 'confirm-del') {
+      confirmId = null;
+      adapter.remove([id]).then(function () { toast('Mot supprimé.'); }).catch(persistFail);
+      renderWords();
+    }
+  });
+  $('word-list').addEventListener('keydown', function (e) {
+    var li = e.target.closest('li[data-id]');
+    if (!li) return;
+    if (e.key === 'Enter' && e.target.tagName === 'INPUT') { e.preventDefault(); saveEdit(li.getAttribute('data-id')); }
+    else if (e.key === 'Escape' && editingId) { editingId = null; renderWords(); }
+  });
+
+  /* ---------- Sauvegarde ---------- */
+  $('export-btn').addEventListener('click', function () {
+    var info = $('backup-info');
+    if (!words.length) { info.textContent = 'Rien à exporter pour l’instant.'; return; }
+    try {
+      var data = JSON.stringify({ app: 'cahier-anglais', version: 1, words: words }, null, 2);
+      var url = URL.createObjectURL(new Blob([data], { type: 'application/json' }));
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'cahier-anglais-' + new Date().toISOString().slice(0, 10) + '.json';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 3000);
+      info.textContent = plural(words.length, 'mot exporté', 'mots exportés') + '.';
+    } catch (e) { info.textContent = 'L’export ne marche pas sur cet appareil.'; }
+  });
+  $('import-btn').addEventListener('click', function () { $('import-file').click(); });
+  $('import-file').addEventListener('change', function (e) {
+    var f = e.target.files && e.target.files[0];
+    var info = $('backup-info');
+    if (!f || !adapter) return;
+    var r = new FileReader();
+    r.onload = function () {
+      try {
+        var p = JSON.parse(String(r.result));
+        var arr = Array.isArray(p) ? p : p.words;
+        if (!Array.isArray(arr)) throw new Error('format');
+        var known = {};
+        words.forEach(function (w) { known[norm(w.en.trim())] = true; });
+        var items = [];
+        arr.forEach(function (w, i) {
+          if (!w || typeof w.en !== 'string' || typeof w.fr !== 'string') return;
+          var k = norm(w.en.trim());
+          if (!k || known[k]) return;
+          known[k] = true;
+          items.push(Object.assign({}, w, { id: w.id || newId(), box: w.box || 0, due: w.due || Date.now(), created: w.created || Date.now() + i }));
+        });
+        if (!items.length) { info.textContent = 'Aucun nouveau mot dans ce fichier.'; return; }
+        adapter.save(items).then(function () {
+          info.textContent = plural(items.length, 'mot importé', 'mots importés') + '.';
+          toast(plural(items.length, 'mot importé', 'mots importés') + '.');
+        }).catch(persistFail);
+      } catch (err) { info.textContent = 'Fichier illisible. Choisis un export de ce cahier.'; }
+    };
+    r.onerror = function () { info.textContent = 'Fichier illisible.'; };
+    r.readAsText(f);
+    e.target.value = '';
+  });
+
+  /* ---------- Démarrage ---------- */
+  function onData(list) {
+    words = list;
+    loaded = true;
+    renderAll();
+  }
+  async function init() {
+    renderAll();
+    var ad = null;
+    adapter = ad || makeLocalAdapter();
+    adapter.start(onData);
+    try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) { /* facultatif */ }
+  }
+  init();
+})();
+</script>
+</body>
+</html>
